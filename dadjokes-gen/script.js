@@ -4,17 +4,20 @@ const punchlineText = document.getElementById('pline');
 const twitterButton = document.getElementById('twitter');
 const newJokeButton = document.getElementById('new-joke');
 const loader = document.getElementById('loader');
+const titles = document.getElementById('title');
 
 
 
 function loading() {
     loader.style.display = "block";
     jokeContainer.style.display = "none";
+    title.style.display = "none";
 }
 
 function doneloading() {
     loader.style.display = "none";
     jokeContainer.style.display = "block";
+    title.style.display = "block";
 }
 
 async function getJoke() {
