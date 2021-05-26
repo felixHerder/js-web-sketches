@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Pad</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- FontAwesome CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Open Modal -->
+    <div class="title">
+        <h1 id="show-modal">Add Link</h1>
+        <i class="fas fa-link"></i>
+    </div>
+    <!-- Links -->
+    <div class="container" id="links-container">
+        <div class="item">
+            <i class="far fa-window-close" id="delete-link" title="delete link"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=imdb.com" alt="favicon">
+                <a href="https://imdb.com" target="_blank">IMDB</a>
+            </div>
+        </div>
+        <div class="item">
+            <i class="far fa-window-close" id="delete-link" title="delete link"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=imdb.com" alt="favicon">
+                <a href="https://imdb.com" target="_blank">IMDB</a>
+            </div>
+        </div>
+        <div class="item">
+            <i class="far fa-window-close" id="delete-link" title="delete link"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=imdb.com" alt="favicon">
+                <a href="https://imdb.com" target="_blank">imdb.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <i class="far fa-window-close close-icon" id="close-modal"></i>
+            <div class="modal-header">
+                <h3>Add Link</h3>
+            </div>
+            <div class="modal-content">
+                <form id="link-form">
+                    <div class="form-group">
+                        <label for="website-url" class="form-label">Website URL</label>
+                        <input type="text" name="" id="website-url" class="form-input" placeholder="paste url" required autocomplete="off">
+                        <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="form-group ">
+                        <label for="website-name " class="form-label ">Website Name</label>
+                        <input type="text " name="" id="website-name" class="form-input " required autocomplete="off">
+                    </div>
+
+                    <button type="submit" id="submit-button">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
