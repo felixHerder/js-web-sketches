@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Heebo, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 480px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    /* padding: 20px 40px; */
+    padding-bottom: 10px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+form {
+    width: 80%;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+
+.form-group {
+    margin-top: 25px;
+    position: relative;
+}
+
+.form-group input {
+    font-family: Heebo, sans-serif;
+    font-size: 1.1rem;
+    color: white;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px #666 solid;
+    overflow: visible;
+    background-color: #444;
+    transition: .3s;
+}
+
+.form-group label {
+    color: #bbb;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    padding-bottom: 3px;
+    padding-left: 2px;
+    transition: 0.2s;
+    cursor: text;
+}
+
+.form-group input:not(:placeholder-shown)+label {
+    font-size: .85rem;
+    transform: translateY(-1.6rem);
+    color: #aaa;
+}
+
+.form-group input:focus+label {
+    font-size: .85rem;
+    transform: translateY(-1.6rem);
+    color: rgb(158, 240, 255);
+}
+
+.form-group input:valid {
+    border-color: rgb(68, 163, 76);
+}
+
+input::placeholder {
+    opacity: 0;
+}
+
+input:focus::placeholder {
+    opacity: 1;
+    color: #999;
+    transition: 0.2s;
+}
+
+button {
+    font-family: Heebo, sans-serif;
+    font-size: 1em;
+    border-radius: 25px;
+    color: #eee;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: #666;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: rgb(77, 142, 179);
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+h3 {
+    color: #bbb;
+    font-weight: 200;
+    text-align: center;
+    font-size: .9rem;
+}
