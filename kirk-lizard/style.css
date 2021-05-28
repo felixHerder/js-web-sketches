@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@font-face {
+    font-family: Final-Frontier;
+    src: url(./Final_Frontier.ttf);
+}
+
+@font-face {
+    font-family: Nova-Light;
+    src: url(./Nova_Light_Ultra.ttf);
+}
+
+:root {
+    --clr0: hsl(24, 0%, 20%);
+    --clr1: hsl(210, 50%, 35%);
+    --clr2: hsl(22, 100%, 35%);
+    --clr3: hsl(192, 50%, 90%);
+    --bkg1: hsl(38, 30%, 70%);
+    --bkg2: hsl(38, 30%, 80%);
+    --bkg3: hsl(38, 30%, 90%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Nova-Light, sans-serif;
+    font-weight: normal;
+    background-color: var(--bkg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 560px;
+    background-color: var(--bkg3);
+    box-shadow: 0 5px 10px rgba(0, 40, 75, 0.3);
+    color: var(--clr0);
+    font-weight: 200;
+}
+
+.header {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    background: var(--clr1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: var(--clr3);
+    letter-spacing: 5px;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.player-container,
+.computer-container {
+    margin: 20px auto;
+    align-self: flex-start;
+}
+
+.computer-container {
+    border-top: 1px solid;
+    border-color: rgba(51, 51, 51, 0.5);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.far {
+    font-size: 3rem;
+    margin: 0 25px;
+    User-select: none;
+    transition: .2s;
+}
+
+#player .far,
+#player .choice {
+    cursor: pointer;
+    color: var(--clr1);
+}
+
+#computer .far,
+#computer .choice {
+    cursor: default;
+    color: var(--clr2);
+}
+
+.selected {
+    color: var(--clr0) !important;
+    transform: scale(1.2);
+}
+
+.reset-icon {
+    display: block;
+    opacity: .5;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 20px auto 0 auto;
+    transition: .2s;
+}
+
+.loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.reset-icon:hover {
+    opacity: 1;
+}
+
+.result-container {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: var(--bkg2);
+    margin: 20px 30px 20px 30px;
+    border-radius: 10px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.result-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 10px var(--bkg3);
+    border-radius: 10px;
+}
+
+.resultGif {
+    filter: sepia();
+    width: 100%;
+    mix-blend-mode: overlay;
+    border-radius: 10px;
+}
+
+.result-text {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    text-shadow: 0 0 10px white;
+}
+
+
+/* Media Query: Large Smartphone (Vertical) */
+
+@media screen and (max-width: 600px) {
+    .game-container {
+        width: 90%;
+    }
+    h1 {
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    .player-container,
+    .computer-container {
+        margin: 0px auto;
+    }
+    .reset-icon {
+        font-size: 1.5rem;
+        margin: 10px auto 0 auto;
+    }
+    .result-container {
+        margin: 20px;
+        height: 80px;
+    }
+    .result-text {
+        font-size: 1.3rem;
+    }
+    .far {
+        font-size: 1.7rem;
+        margin: 10px;
+    }
+}
