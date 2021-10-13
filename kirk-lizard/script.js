@@ -1,5 +1,4 @@
-import { startConfetti, stopConfetti, removeConfetti } from "./confetti.js";
-
+// import { startConfetti, stopConfetti, removeConfetti } from "./confetti.js";
 
 const gifArray = [
     'https://thumbs.gfycat.com/HeavyLiquidEastrussiancoursinghounds-max-1mb.gif',
@@ -92,7 +91,7 @@ function checkResult(player) {
         playerScore++;
         playerScoreEl.textContent = playerScore;
         resultGif.classList.add("result-gif-win");
-        startConfetti();
+        // startConfetti();
     }
     newGif();
 }
@@ -102,7 +101,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function select(e, playerChoice) {
-    stopConfetti();
+    // stopConfetti();
     allGameIcons.forEach(e => e.classList.remove('selected'));
     e.classList.add('selected');
     playerChoiceEl.textContent = playerChoice[0].toUpperCase() + playerChoice.slice(1);
@@ -131,5 +130,5 @@ reset.addEventListener('click', () => {
     resultText.style.color = "var(--clr0)";
     playerChoiceEl.textContent = 'pick one';
     computerChoiceEl.textContent = '';
-    stopConfetti();
+    // stopConfetti();
 })

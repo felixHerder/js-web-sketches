@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Endless Scroll</title>
     <!-- Favicon -->
     <link rel="icon" href="infinity.ico" type="image/x-icon" />
     <!-- FontAwesome CSS  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- Back Link -->
+    <div
+      style="width: fit-content; background: #cc4000; border-radius: 16px; padding: 8px 16px; margin:128px 16px; position: fixed; top: 0; left: 0; z-index: 999"
+    >
+      <a href="/" style="color: white; text-decoration: none; display: flex; align-items: center">
+        <svg style="display: block" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+        </svg>
+        <span style="font-size: 16px; height: 100%; display: block; margin-left: 8px">Back</span>
+      </a>
+    </div>
     <!-- Title -->
     <h1>Endless Scroll</h1>
-    <a id="api-link" href="https://unsplash.com/developers" title='unsplash api' target='_blank'>
-        powered by Unsplash API
-            
-    </a>
+    <a id="api-link" href="https://unsplash.com/developers" title="unsplash api" target="_blank"> powered by Unsplash API </a>
     <!-- Loader -->
     <div class="loader" id="loader">
-        <img src="./svg-loaders/tail-spin.svg" alr="loading" />
+      <img src="./svg-loaders/tail-spin.svg" alr="loading" />
     </div>
-    <div class="image-container" id="image-container">
-
-    </div>
+    <div class="image-container" id="image-container"></div>
     <!-- Script -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

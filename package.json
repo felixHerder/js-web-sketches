@@ -1,0 +1,23 @@
+{
+  "name": "js-web-sketches",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server --port=3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixHerder/js-web-sketches.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixHerder/js-web-sketches/issues"
+  },
+  "homepage": "https://github.com/felixHerder/js-web-sketches#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

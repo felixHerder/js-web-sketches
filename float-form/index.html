@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yet Another Form</title>
     <!-- Favicon -->
     <link rel="icon" href="favicon.png" type="image/x-icon" />
     <!-- FontAwesome CSS  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- Back Link -->
+    <div
+      style="width: fit-content; background: #cc4000; border-radius: 16px; padding: 8px 16px; margin: 16px; position: absolute; top: 0; left: 0; z-index: 999"
+    >
+      <a href="/" style="color: white; text-decoration: none; display: flex; align-items: center">
+        <svg style="display: block" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+        </svg>
+        <span style="font-size: 16px; height: 100%; display: block; margin-left: 8px">Back</span>
+      </a>
+    </div>
     <div class="container">
-        <h1>Form it up!</h1>
-        <!-- Form -->
-        <form id="form" autocomplete="off">
-            <!-- Full name -->
-            <div class="form-group">
-                <input required spellcheck="false" autocomplete="off" auto-complete="off" type="text" id="name" placeholder="Johhny Law" name="name">
-                <label for="name">Full Name</label>
-            </div>
-            <!-- phone -->
-            <div class="form-group" autocomplete="off">
-                <input required spellcheck="false" autocomplete="off" type="tel" pattern="[0-9]{4}-[0-9]{6}" id="phone" placeholder="0123-567890" name="phone">
-                <label for="phone">Phone Number</label>
-            </div>
-            <!-- email -->
-            <div class="form-group">
-                <input required spellcheck="false" autocomplete="off" type="email" id="email" placeholder="johhnylaw@sherif.com" name="email">
-                <label for="email">Email Adress</label>
-            </div>
-            <!-- website -->
-            <div class="form-group">
-                <input required spellcheck="false" autocomplete="off" type="url" id="website" placeholder="http://example.com" name="website">
-                <label for="website">Website URL</label>
-            </div>
-            <!-- password -->
-            <div class="form-group">
-                <input required spellcheck="false" autocomplete="off" type="password" id="password1" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" placeholder="Create Password (min 8 chars.)" title="Include at least 1 uppercase letter and 1 number">
-                <label for="password1">Password</label>
-            </div>
-            <div class="form-group">
-                <input required spellcheck="false" autocomplete="off" type="password" id="password2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" placeholder="Confirm Password">
-                <label for="password2" name="password">Confirm Password</label>
-            </div>
-            <button type=submit>Register</button>
-            <!-- validation messages -->
-            <div class="message-container">
-                <h3 id="message">Go on then!</h3>
-            </div>
-        </form>
+      <h1>Form it up!</h1>
+      <!-- Form -->
+      <form id="form" autocomplete="off">
+        <!-- Full name -->
+        <div class="form-group">
+          <input required spellcheck="false" autocomplete="off" auto-complete="off" type="text" id="name" placeholder="Johhny Law" name="name" />
+          <label for="name">Full Name</label>
+        </div>
+        <!-- phone -->
+        <div class="form-group" autocomplete="off">
+          <input required spellcheck="false" autocomplete="off" type="tel" pattern="[0-9]{4}-[0-9]{6}" id="phone" placeholder="0123-567890" name="phone" />
+          <label for="phone">Phone Number</label>
+        </div>
+        <!-- email -->
+        <div class="form-group">
+          <input required spellcheck="false" autocomplete="off" type="email" id="email" placeholder="johhnylaw@sherif.com" name="email" />
+          <label for="email">Email Adress</label>
+        </div>
+        <!-- website -->
+        <div class="form-group">
+          <input required spellcheck="false" autocomplete="off" type="url" id="website" placeholder="http://example.com" name="website" />
+          <label for="website">Website URL</label>
+        </div>
+        <!-- password -->
+        <div class="form-group">
+          <input
+            required
+            spellcheck="false"
+            autocomplete="off"
+            type="password"
+            id="password1"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            placeholder="Create Password (min 8 chars.)"
+            title="Include at least 1 uppercase letter and 1 number"
+          />
+          <label for="password1">Password</label>
+        </div>
+        <div class="form-group">
+          <input
+            required
+            spellcheck="false"
+            autocomplete="off"
+            type="password"
+            id="password2"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            placeholder="Confirm Password"
+          />
+          <label for="password2" name="password">Confirm Password</label>
+        </div>
+        <button type="submit">Register</button>
+        <!-- validation messages -->
+        <div class="message-container">
+          <h3 id="message">Go on then!</h3>
+        </div>
+      </form>
     </div>
     <!-- Script -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

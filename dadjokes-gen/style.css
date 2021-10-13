@@ -19,7 +19,7 @@ body {
 
 .main-container {
     margin: 10px;
-    transform: translateY(0%);
+    transform: translateY(-15%);
 }
 
 #title {

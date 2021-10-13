@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NASA Favorites</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov" />
     <!-- ZTM Favicon -->
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- Back Link -->
+    <div
+      style="width: fit-content; background: #cc4000; border-radius: 16px; padding: 8px 16px; margin:64px 16px; position: fixed; top: 0; left: 0; z-index: 999"
+    >
+      <a href="/" style="color: white; text-decoration: none; display: flex; align-items: center">
+        <svg style="display: block" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+        </svg>
+        <span style="font-size: 16px; height: 100%; display: block; margin-left: 8px">Back</span>
+      </a>
+    </div>
     <div class="loader hidden">
-        <img src="./milky-way.svg" alt="Milkway Loading Animation">
+      <img src="./milky-way.svg" alt="Milkway Loading Animation" />
     </div>
     <div class="container">
-        <div class="navigation-container">
-            <span class="background"></span>
-            <span class="navigation-items " id="resultsNav">
-                <h3 class="clickable" onclick="updateDOM('favorites')" >Favorites</h3>
-                <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
-                <h3 class="clickable" onclick="getNasaPictures()" >Load More</h3>
-            </span>
-            <span class="navigation-items hidden " id="favoritesNav">
-                <h3 class="clickable" onclick="getNasaPictures()" >Load More NASA Images</h3>
-            </span>
-        </div>
+      <div class="navigation-container">
+        <span class="background"></span>
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('favorites')">Favorites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="getNasaPictures()">Load More</h3>
+        </span>
+        <span class="navigation-items hidden" id="favoritesNav">
+          <h3 class="clickable" onclick="getNasaPictures()">Load More NASA Images</h3>
+        </span>
+      </div>
     </div>
     <!--images -->
-    <div class="images-container">
-
-    </div>
+    <div class="images-container"></div>
     <!-- save -->
     <div class="save-confirmed" hidden>
-        <h1>ADDED!</h1>
+      <h1>ADDED!</h1>
     </div>
     <!-- Script -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -107,7 +107,10 @@ function loadLinks() {
         links = [{ name: 'Unsplash', url: 'https://unsplash.com' },
             { name: 'reddit: the front page of the internet', url: 'https://reddit.com' },
             { name: 'DuckDuckGo — Privacy, simplified.', url: 'https://duckduckgo.com' },
-            { name: 'IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows', url: 'https://imdb.com' }
+            { name: 'IMDb: Ratings, Reviews, and Where to Watch the Best Movies & TV Shows', url: 'https://imdb.com' },
+            { name: 'Dribbble - Discover the World’s Top Designers & Creative Professionals', url: 'https://dribbble.com/' },
+            { name: 'Build the portfolio you need to be a badass web developer. | egghead.io', url: 'https://egghead.io/' },
+            { name: 'Metacritic - Movie Reviews, TV Reviews, Game Reviews, and Music Reviews', url: 'https://www.metacritic.com/' },
         ];
 
         localStorage.setItem('links', JSON.stringify(links));

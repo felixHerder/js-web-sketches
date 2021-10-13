@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dad Jokes Generator</title>
     <!-- Favicon -->
     <link rel="icon" href="frank.ico" type="image/x-icon" />
     <!-- FontAwesome CSS  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <div class="main-container">
-        <h1 id="title">Dad Jokes Generator</h1>
-        <div class="joke-container" id="joke-container">
-            <!-- Phrase -->
-            <div class="setup-text">
-                <i class="fas fa-running"></i>
-                <span id="setup">Why does a chicken coop only have two doors?</span>
-            </div>
-            <!-- Author -->
-            <div class="punch-line">
-                <span id="pline">Because if it had four doors it would be a chicken sedan.</span>
-            </div>
-            <!-- Buttons -->
-            <div class="button-container">
-                <button class="twitter-button" id="twitter" title="Tweet this!">
-                    <i class="fab fa-twitter"></i>
-                </button>
-                <button id="new-joke">New Joke</button>
-            </div>
-        </div>
-        <!-- Loader -->
-        <div class="loader" id="loader"></div>
-        <!-- Script -->
-        <script src="script.js"></script>
+  <body>
+    <!-- Back Link -->
+    <div
+      style="width: fit-content; background: #cc4000; border-radius: 16px; padding: 8px 16px; margin: 16px; position: absolute; top: 0; left: 0; z-index: 999"
+    >
+      <a href="/" style="color: white; text-decoration: none; display: flex; align-items: center">
+        <svg style="display: block" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+          <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
+        </svg>
+        <span style="font-size: 16px; height: 100%; display: block; margin-left: 8px">Back</span>
+      </a>
     </div>
-</body>
-
+    <div class="main-container">
+      <h1 id="title">Dad Jokes Generator</h1>
+      <div class="joke-container" id="joke-container">
+        <!-- Phrase -->
+        <div class="setup-text">
+          <i class="fas fa-running"></i>
+          <span id="setup">Why does a chicken coop only have two doors?</span>
+        </div>
+        <!-- Author -->
+        <div class="punch-line">
+          <span id="pline">Because if it had four doors it would be a chicken sedan.</span>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="twitter-button" id="twitter" title="Tweet this!">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button id="new-joke">New Joke</button>
+        </div>
+      </div>
+      <!-- Loader -->
+      <div class="loader" id="loader"></div>
+      <!-- Script -->
+      <script src="script.js"></script>
+    </div>
+  </body>
 </html>
